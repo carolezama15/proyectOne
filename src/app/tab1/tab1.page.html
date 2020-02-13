@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
+
+    <ion-title align='center'>
       Bienvenido a SOClose
       <ion-icon name="magnet"></ion-icon>
     </ion-title>
@@ -13,6 +14,24 @@
       <ion-title size="large">Inicio</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content padding>
+    <form #form="ngForm" (ngSubmit)="login(form)" method="post" align="center">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input ngModel type="email" name="email"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input ngModel type="password" name="password"></ion-input>
+      </ion-item>
+    
+      <p align="text-right">Forgot Password?</p>
+    
+      <ion-button type="submit" expand="full" color="primary">Login</ion-button>
+    </form>
+    <p align="center">Don't have a account?</p>
+    <ion-button expand="full" color="danger" (click)="registerModal()">Register</ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <p align="center">BIENVENIDO A SOCLOSE </p>    
 </ion-content>
