@@ -24,10 +24,10 @@
         <ion-label position="floating">Password</ion-label>
         <ion-input ngModel type="password" name="password"></ion-input>
       </ion-item>
-      <ion-button expand="full" (onclick)="login()">Login</ion-button>
+      <ion-button expand="full" (onclick)="presentAlert()">Login</ion-button>
     </form>
     <p align="center">REGISTRATE</p>
-    <ion-button  expand="full" color="danger" (click)="registerModal()">Register</ion-button>
+    <ion-button  expand="full" color="danger" routerLink='/register'>Register</ion-button>
     <p align="center">O</p>
     <table align="center">
       <tr>

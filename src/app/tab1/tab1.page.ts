@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public actionSheetControler:ActionSheetController, alertController: AlertController) {}
+
+  async presentAlert() {
+    const alert = await this.actionSheetControler.create({
+      header: 'Bienvenido',
+      subHeader: 'SOCLOSE',
+      buttons: ['Continuar']
+    });
+
+    await alert.present();
+  }
 
 }
