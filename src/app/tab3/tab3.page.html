@@ -1,18 +1,69 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      ¿Como va todo? 
+      Configuración
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Configuración</ion-title>
     </ion-toolbar>
-    
   </ion-header>
-    <app-explore-container name="Tab 3 page"></app-explore-container>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container>
+
+  <!--Usuario -->
+  <ion-item>
+    <ion-avatar slot="start">
+      <img
+        src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/06/178298-es-seguro-ver-porno-modo-incognito-navegador.jpg?itok=MNo2Sr0C">
+    </ion-avatar>
+    <ion-label>
+      <h2>Nombre Usuaio</h2>
+      <h3>Información</h3>
+      <p>Estado</p>
+    </ion-label>
+  </ion-item>
+
   
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Perfil</ion-label>
+      <ion-button>Ver Perfil</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Compartir</ion-label>
+      <ion-button (click)="presentActionSheet()"> Redes Sociales </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Wifi</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bluetooth</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Activar GPS</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Activar Notificaciones</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+
+  </ion-list>
+
+
 </ion-content>
