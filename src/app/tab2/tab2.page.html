@@ -1,8 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center;">
-      Menu Principal
-    </ion-title>
+    <ion-row>
+      <ion-title>
+        Menu principal
+      </ion-title>
+      <ion-list>
+        <ion-item>
+          <ion-avatar class="logo" slot="start">
+            <img  src="https://image.flaticon.com/icons/png/512/44/44948.png">
+          </ion-avatar>
+        </ion-item>
+      </ion-list>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
@@ -14,19 +23,35 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>SOCLOSE</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      SoClose, la herramienta perfecta para encontrar a tus amigos cuando llegas 
-      a un lugar. 
-    </ion-card-content>
-  </ion-card>
   
-  <ion-button color="success" expand="full">Buscar amigos</ion-button>
-  <ion-button color="success" expand="full">Agregar amigos</ion-button>
-  <ion-button color="success" expand="full">Favoritos</ion-button>
-  <ion-button color="success" expand="full">Listado de amigos</ion-button>
+ 
+
+  <ion-button color="dark" style="margin-left: 40px; max-width: auto; width: 250px;" ion-button icon-right  expand="round"> 
+    Buscar amigos  
+    <br>                  
+    <ion-icon name="search-outline"></ion-icon>
+  </ion-button>
+
+  <ion-button color="dark" style="margin-left: 40px; max-width: auto; width: 250px;" ion-button icon-right expand="round">
+    Agregar amigos
+    <br>
+    <ion-icon name="person-add-outline"></ion-icon>
+  </ion-button>
+
+  <ion-button color="dark" style="margin-left: 40px; max-width: auto; width: 250px;" ion-button icon-right expand="round">
+    Favoritos
+    <br>
+    <ion-icon name="star-outline"></ion-icon>
+  </ion-button>
+
+  <ion-button color="dark" style="margin-left: 40px; max-width: auto; width: 250px;" ion-button icon-right expand="round">
+    Listado de amigos
+    <ion-icon name="people-circle-outline"></ion-icon>
+  </ion-button>
+
+
+
+  
+
+
 </ion-content>
