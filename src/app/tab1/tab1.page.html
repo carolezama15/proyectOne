@@ -2,7 +2,8 @@
   <ion-toolbar>
 
     <ion-title align='center'>
-      <img src="assets/images/Logo.jpg" alt="placeholder" height="70">  
+      <ion-button expand="full" color="dark" routerLink='/login'>Iniciar sesión</ion-button>
+      <ion-button  expand="full" color="dark" routerLink='/register'>Registrate</ion-button>
     </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -13,39 +14,6 @@
       <ion-title size="large">Inicio</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content padding>
-    <form align="center">
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input ngModel type="email" name="email"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input ngModel type="password" name="password"></ion-input>
-      </ion-item>
-      <ion-button expand="full" (onclick)="presentAlert()">Login</ion-button>
-    </form>
-    <p align="center">REGISTRATE</p>
-    <ion-button  expand="full" color="danger" routerLink='/register'>Register</ion-button>
-    <p align="center">O</p>
-    <table align="center">
-      <tr>
-        <th>
-            <ion-avatar>
-                <img src="assets/images/Facebook.png" alt="placeholder" height="70">
-              </ion-avatar>
-        </th>
-        <th>
-            <ion-avatar>
-                <img src="assets/images/google.png" alt="placeholder" height="70">
-              </ion-avatar>
-        </th>
-        <th>
-            <ion-avatar>
-                <img src="assets/images/instagram.png" alt="placeholder" height="70">
-              </ion-avatar>
-        </th>
-      </tr>
-    </table> 
+  <ion-content padding class="background">
+     
 </ion-content>

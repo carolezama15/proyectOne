@@ -1,18 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+  <ion-toolbar height="30">
+    <table align="center">
+<tr>
+<th>
+  <ion-img src="../../assets/images/Logo.PNG" alt="placeholder" style="width: 230px; height: 230px; align: center"></ion-img>
+</th>
+</tr>
+    </table>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-content  color="primary">
-    <form  #form="ngForm" (ngSubmit)="register(form)">
+  <ion-content  color="light">
+    <form  color="light"  #form="ngForm" (ngSubmit)="register(form)">
       <ion-grid>
-        <ion-row color="primary" justify-content-center>
+        <ion-row color="light" justify-content-center>
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-            <div text-center>
-              <h3>Create your account!</h3>
-            </div>
             <div padding>
               <ion-item>
                 <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
@@ -27,12 +30,10 @@
                 <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
               </ion-item>
             </div>
-            <div padding>
-              <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
-            </div>
-          </ion-col>
+            </ion-col>
         </ion-row>
       </ion-grid>
     </form>
+    <ion-button  color="medium" size="large" expand="block" routerLink='/tab1.html'>Registrate</ion-button>
   </ion-content>
 </ion-content>
