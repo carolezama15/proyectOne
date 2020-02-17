@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>AgregarAmigos</ion-title>
+    <ion-row>
+      <ion-title>Agregar amigos</ion-title>
+      <ion-list>
+        <ion-button color= "dark" [routerLink] = "['/tab2']" > Menu </ion-button>
+      </ion-list>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div>
+    <ion-item>
+      <ion-label>Agrega amigos por usuario</ion-label>
+    </ion-item>
+    <ion-searchbar color="dark" placeholder="user"></ion-searchbar>
+    <ion-item>
+      <ion-label>Agrega por correo </ion-label>
+    </ion-item>
+    <ion-searchbar color="dark" placeholder="e-mail"></ion-searchbar> 
+    <ion-item>
+      <ion-label>Agrega por telefono </ion-label>
+    </ion-item>
+    <ion-searchbar color="dark" placeholder="number"></ion-searchbar> 
+  </div>
 
+  <ion-button class = "botonNoEncuentra" color= "dark" (click) = "presentAlert()">
+    ¿No encuentras a tu amigo?
+   </ion-button>
 </ion-content>

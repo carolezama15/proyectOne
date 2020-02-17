@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-agregar-amigos',
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarAmigosPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) {}
 
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Información',
+      message: 'Próximamente estará disponible la manera de encontrar a tus amigos!',
+      buttons: ['de acuerdo ']
+    });
+    await alert.present();
+  }
   ngOnInit() {
   }
 
