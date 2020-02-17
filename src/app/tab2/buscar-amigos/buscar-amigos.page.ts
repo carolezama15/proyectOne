@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController} from '@ionic/angular'; 
+import { Button } from 'protractor';
 
 @Component({
   selector: 'app-buscar-amigos',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarAmigosPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) {}
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Información',
+      message: 'Próximamente estará disponible el radar buscador de amigos!',
+      buttons: ['parece genial! ']
+    });
+    await alert.present();
+  }
 
   ngOnInit() {
   }

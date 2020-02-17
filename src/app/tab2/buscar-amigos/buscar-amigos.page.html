@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>BuscarAmigos</ion-title>
+    <ion-row>
+      <ion-title>BuscarAmigos</ion-title>
+      <ion-list>
+        <ion-button color= "dark" [routerLink] = "['/tab2']" > Menu </ion-button>
+      </ion-list>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    Se presentará el icono de busqueda por maps (aun no implementado)
+    <img src="https://images.vexels.com/media/users/3/132079/isolated/preview/a63ea5b5a4853bbc0cee3df021e74694-icono-de-herramientas-de-configuraci--n-by-vexels.png"> 
+  </ion-card>
 
+  <ion-button color= "dark" class = "centrado" (click) = "presentAlert()">
+    Buscar amigos 
+   </ion-button>
 </ion-content>
