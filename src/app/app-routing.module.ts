@@ -25,7 +25,23 @@ const routes: Routes = [
   {
     path: 'tab3',
     loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+  },  {
+    path: 'buscar-amigos',
+    loadChildren: () => import('./tab2/buscar-amigos/buscar-amigos.module').then( m => m.BuscarAmigosPageModule)
+  },
+  {
+    path: 'agregar-amigos',
+    loadChildren: () => import('./tab2/agregar-amigos/agregar-amigos.module').then( m => m.AgregarAmigosPageModule)
+  },
+  {
+    path: 'favoritos',
+    loadChildren: () => import('./tab2/favoritos/favoritos.module').then( m => m.FavoritosPageModule)
+  },
+  {
+    path: 'listado-amigos',
+    loadChildren: () => import('./tab2/listado-amigos/listado-amigos.module').then( m => m.ListadoAmigosPageModule)
   }
+
 
 ];
 @NgModule({
