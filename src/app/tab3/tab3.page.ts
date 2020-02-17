@@ -11,7 +11,18 @@ import { AlertController } from '@ionic/angular';
 export class Tab3Page {
   alertController: AlertController;
 
-  constructor(public actionSheetController: ActionSheetController, alertController: AlertController) { }
+  constructor(public actionSheetController: ActionSheetController, public alertController: AlertController) { }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      subHeader: 'Subtitle',
+      message: 'This is an alert message.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
 
    async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
