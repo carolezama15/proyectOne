@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActionSheetController, AlertController } from '@ionic/angular';
+import { ActionSheetController  } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { ActionSheetController, AlertController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  alertController: AlertController;
 
   constructor(public actionSheetController: ActionSheetController, alertController: AlertController) { }
 
@@ -43,10 +45,14 @@ export class Tab3Page {
     });
     await actionSheet.present();
   }
-
-
-
-
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Información',
+      message: 'Próximamente estará disponible tu perfil',
+      buttons: ['entendido! ']
+    });
+    await alert.present();
+  }
 
 }
 
