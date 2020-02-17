@@ -3,7 +3,7 @@
     <ion-row>
       <ion-title>Agregar amigos</ion-title>
       <ion-list>
-        <ion-button color= "dark" [routerLink] = "['/tab2']" > Menu </ion-button>
+        <ion-button color= "dark" [routerLink] = "['/tabs/tab2']" > Menu </ion-button>
       </ion-list>
     </ion-row>
   </ion-toolbar>
@@ -25,7 +25,7 @@
     <ion-searchbar color="dark" placeholder="number"></ion-searchbar> 
   </div>
 
-  <ion-button class = "botonNoEncuentra" color= "dark" (click) = "presentAlert()">
+  <ion-button style="margin-left: 20px;" color= "dark" (click) = "presentAlert()">
     ¿No encuentras a tu amigo?
    </ion-button>
 </ion-content>
