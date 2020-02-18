@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-row>
       <ion-title>
         Menu principal
@@ -23,31 +23,121 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
  
-  <div class="buttons" align="center">
+
+      <table>
+
+        <tr>
+
+          <th [routerLink] = "['/buscar-amigos']">
+
+            <ion-card color="dark"  >
+
+              <ion-icon name="search-outline" class="icono"></ion-icon>
+
+              <ion-card-header>
+
+                <ion-card-subtitle>Search friends</ion-card-subtitle>
+
+                <ion-card-title>Buscar Amigos</ion-card-title>
+
+              </ion-card-header>
+
+            </ion-card>
+
+          </th>
+
+          <th [routerLink] = "['/agregar-amigos']" >
+
+            <ion-card color="dark" >
+
+              <ion-icon  name="person-add-outline" class="icono" ></ion-icon>
+
+              <ion-card-header>
+
+                <ion-card-subtitle>Add friends</ion-card-subtitle>
+
+                <ion-card-title>Agregar amigos</ion-card-title>
+
+              </ion-card-header>
+
+            </ion-card>
+
+          </th>
+
+        </tr>
+
+        <tr>
+
+          <th [routerLink] = "['/favoritos']">
+
+            <ion-card color="dark">
+
+              <ion-icon name="star-outline" class="iconoStar"></ion-icon>
+
+              <ion-card-header>
+
+                <ion-card-subtitle>Favorites</ion-card-subtitle>
+
+                <ion-card-title>Ver Favoritos</ion-card-title>
+
+              </ion-card-header>
+
+            </ion-card>
+
+          </th>
+
+          <th [routerLink] = "['/listado-amigos']">
+
+            <ion-card color="dark">
+
+              <ion-icon name="people-circle-outline" class="iconoStar"></ion-icon>
+
+              <ion-card-header>
+
+                <ion-card-subtitle>Contacts</ion-card-subtitle>
+
+                <ion-card-title>Listado Amigos</ion-card-title>
+
+              </ion-card-header>
+
+            </ion-card>
+
+          </th>
+
+        </tr>
+
+      </table>
+
+<!--
+
     <ion-button align="center" [routerLink] = "['/buscar-amigos']"  color="dark" style="max-width: auto; width: 220px;" ion-button icon-right  expand="round"> 
       Buscar amigos  
       <br>                  
       <ion-icon name="search-outline"></ion-icon>
     </ion-button>
-
     <ion-button align="center" [routerLink] = "['/agregar-amigos']" color="dark" style="max-width: auto; width: 220px;" ion-button icon-right expand="round">
       Agregar amigos
       <br>
       <ion-icon name="person-add-outline"></ion-icon>
     </ion-button>
 
-    <ion-button align="center" [routerLink] = "['/favoritos']" color="dark" style="max-width: auto; width: 220px;" ion-button icon-right expand="round">
+    <ion-button align="center"  color="dark" style="max-width: auto; width: 220px;" ion-button icon-right expand="round">
+
       Favoritos
       <br>
       <ion-icon name="star-outline"></ion-icon>
     </ion-button>
 
-    <ion-button align="center" [routerLink] = "['/listado-amigos']" color="dark" style="max-width: auto; width: 220px;" ion-button icon-right expand="round">
+
+
+    <ion-button align="center"  color="dark" style="max-width: auto; width: 220px;" ion-button icon-right expand="round">
+
       Listado de amigos
       <ion-icon name="people-circle-outline"></ion-icon>
     </ion-button>
-  </div>
+
+-->
 
 </ion-content>
