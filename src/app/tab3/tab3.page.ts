@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionSheetController  } from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
 
@@ -12,24 +12,24 @@ export class Tab3Page {
 
   constructor(public actionSheetController: ActionSheetController, public alertController: AlertController) { }
 
-   async presentActionSheet() {
+  async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Opciones',
       buttons: [{
         text: 'Instagram',
-        icon: 'heart',
+        icon: 'logo-instagram',
         handler: () => {
-          console.log('Favorite clicked');
+          console.log('Share clicked');
         }
       }, {
         text: 'Twiter',
-        icon: 'heart',
+        icon: 'logo-twitter',
         handler: () => {
-          console.log('Favorite clicked');
+          console.log('Play clicked');
         }
       }, {
         text: 'Facebook',
-        icon: 'heart',
+        icon: 'logo-facebook',
         handler: () => {
           console.log('Favorite clicked');
         }
@@ -52,6 +52,58 @@ export class Tab3Page {
     });
     await alert.present();
   }
+
+  async presentAlertWifi() {
+    const alert = await this.alertController.create({
+      header: 'Wifi',
+      message: 'Buscando wifi...',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+  async presentAlertBluetooth() {
+    const alert = await this.alertController.create({
+      header: 'Bluetooth',
+      message: 'Buscando Bluetooth...',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+  async presentAlertGPS() {
+    const alert = await this.alertController.create({
+      header: '¿Quieres activar tu GPS?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Okay',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async presentAlertNotificaciones() {
+    const alert = await this.alertController.create({
+      header: 'Notificaciones',
+      message: 'Notificaciones activadas.',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+
 
 }
 
