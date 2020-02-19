@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
       Configuración
     </ion-title>
@@ -19,11 +19,10 @@
   <!--Usuario -->
   <ion-item>
     <ion-avatar slot="start">
-      <img
-        src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2016/06/178298-es-seguro-ver-porno-modo-incognito-navegador.jpg?itok=MNo2Sr0C">
+      <ion-img src="../../assets/images/incognitoImagw.jpg" alt="placeholder" height="30"></ion-img>
     </ion-avatar>
     <ion-label>
-      <h2>Nombre Usuaio</h2>
+      <h2>Nombre Usuario</h2>
       <h3>Información</h3>
       <p>Estado</p>
     </ion-label>
@@ -35,7 +34,7 @@
 
     <ion-item>
       <ion-label>Perfil</ion-label>
-      <ion-button color="medium">Ver Perfil</ion-button>
+      <ion-button  (click) = "presentAlert()" color="medium">Ver Perfil</ion-button>
     </ion-item>
 
     <ion-item>
@@ -45,27 +44,27 @@
 
     <ion-item>
       <ion-label>Wifi</ion-label>
-      <ion-toggle slot="end"></ion-toggle>
+      <ion-toggle slot="end" (click) = "presentAlertWifi()" color="medium"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>Bluetooth</ion-label>
-      <ion-toggle slot="end"></ion-toggle>
+      <ion-toggle slot="end" (click) = "presentAlertBluetooth()" color="medium"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>Activar GPS</ion-label>
-      <ion-toggle slot="end"></ion-toggle>
+      <ion-toggle slot="end" (click) = "presentAlertGPS()" color="medium"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>Activar Notificaciones</ion-label>
-      <ion-toggle slot="end"></ion-toggle>
+      <ion-toggle slot="end" (click) = "presentAlertNotificaciones()" color="medium"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>       </ion-label>
-      <ion-button style="text-align: right" color="medium" [routerLink] = "['/tab2']" > Volver al Menu </ion-button>
+      <ion-button style="text-align: right" color="medium" [routerLink] = "['/tabs/tab2']" > Volver al Menu </ion-button>
     </ion-item>
 
   </ion-list>

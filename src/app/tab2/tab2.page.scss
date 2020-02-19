@@ -2,13 +2,20 @@ ion-content ion-toolbar {
   --background: translucent;
 }
 ion-content{
+  --background: url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-gray-solid-color-background.jpg) 0 0/100% 100% no-repeat;
   --background: #F9F8F8;
 }
- 
 .logo{
-    right: 0px;
+  right: 0px;
   }
 .buttons{
-    margin-top: 25%;
+  margin-top: 25%;
 }
-
+.icono{
+  width: 100px;
+  height: 100px;
+}
+.iconoStar{
+  width: 125px;
+  height: 125px;
+}

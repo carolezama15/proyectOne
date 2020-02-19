@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-favoritos',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritosPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) {}
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Información',
+      message: 'Próximamente estará disponible el listado de amigos!',
+      buttons: ['de acuerdo ']
+    });
+    await alert.present();
+  }
 
   ngOnInit() {
   }

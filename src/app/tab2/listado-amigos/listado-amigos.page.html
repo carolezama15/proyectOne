@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>ListadoAmigos</ion-title>
+  <ion-toolbar >
+    <ion-row>
+      <ion-title>Listado de amigos</ion-title>
+      <ion-list>
+        <ion-button color= "dark" [routerLink] = "['/tabs/tab2']" > Menu </ion-button>
+      </ion-list>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-    
+  <ion-card align="center">
+    <ion-button color= "dark" class = "centrado" (click) = "presentAlert()">
+      Listado de amigos
+     </ion-button>
+    </ion-card>
 </ion-content>
